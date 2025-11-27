@@ -135,7 +135,7 @@ cut -d " " -f 8 sample.log | sort | uniq -c | sort -nr
 - `sort -nr` sorts by highest count
 
 
-## Example 7 - MAtch timestampls between 12:02:00 and 12:02:30
+## Example 7 - Match timestamps between 12:02:00 and 12:02:30
 
 **Question:**
 CShow log entries between 12:02:00 and 12:02:30
@@ -169,7 +169,7 @@ Filter request lines, extract hte URL field, sort, remove duplicates.
 
 ## Example 9 - Show only IPs in the 10.x.x.x range
 **Question:** 
-Show lones where the IP starts with 10..
+Show lines where the IP starts with 10..
 
 **Answer:**
 
