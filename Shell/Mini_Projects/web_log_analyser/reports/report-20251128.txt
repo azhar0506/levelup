@@ -1,0 +1,18 @@
+=== Daily Report ===
+Total requests:       13
+
+Status codes:
+   9 200
+   2 302
+   2 404
+   1 500
+
+Top IPs:
+   3 192.168.1.11
+   3 192.168.1.10
+   3 172.16.0.4
+
+Top URLs:
+   5 /index.html
+   4 /api/v1/items
+   3 /dashboard
