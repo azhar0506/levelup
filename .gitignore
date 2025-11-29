@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Obsidian
+.obsidian/
+
+# Editor / OS junk
+Thumbs.db
+*.swp
+*.log
