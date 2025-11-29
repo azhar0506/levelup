@@ -8,8 +8,10 @@ Note: This repository exists primarily for my own reference and learning. Feel f
 I'm following a self-directed DevOps learning path:
 
 - [x] Linux basics
-- [x] Git basics → intermediate
-- [o] Shell scripting
+- [x] Git basics
+- [x] Git intermediate
+- [x] Shell scripting basics
+- [o] Shell scripting intermediate
 - [ ] Docker
 - [ ] Kubernetes
 - [ ] CI/CD pipelines
