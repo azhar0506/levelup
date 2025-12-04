@@ -16,7 +16,7 @@ The intermediate section expands beyond LabEx and covers practical automation, t
 - [x] Day 5 – find + xargs
 - [x] Day 6 – Exit codes & set -euo pipefail 
 - [x] Day 7 – Processes & job control
-- [ ] Day 8 –  Project 1: Log Analyzer 
+- [x] Day 8 –  Project 1: Log Analyzer 
 - [ ] Day 9 – Cron & scheduling
 - [ ] Day 10 – Traps & cleanup
 - [ ] Day 11 – `getopts` & CLI flags 
