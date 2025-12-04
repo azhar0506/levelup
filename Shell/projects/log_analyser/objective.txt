@@ -1,0 +1,16 @@
+Day 8 – Project 1: Log Analyzer
+
+Goal: First proper mini-project.
+
+Build: analyze_nginx.sh
+
+Requirements:
+	•	Input: path to nginx-style access log (or any log with IP + status code)
+	•	Output:
+	•	top 5 IPs
+	•	number of 2xx / 3xx / 4xx / 5xx
+	•	top 5 requested URLs
+	•	Use: grep, awk, sort, uniq, head, pipes, redirection
+	•	Script should:
+	•	set -euo pipefail
+	•	Fail with clear message if file doesn’t exist
