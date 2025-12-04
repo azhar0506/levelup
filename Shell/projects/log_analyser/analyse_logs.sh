@@ -27,6 +27,3 @@ echo "  ####### TOP 5 url ###########"
 
 awk '{print $7}' "$1" | sort | uniq -c | sort -nr | head -5
 
-
-
-
