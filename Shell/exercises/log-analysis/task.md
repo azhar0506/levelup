@@ -10,7 +10,7 @@ This gives a mix of system, security, application, and operations logs — which
 
 ##  Suggested Shell-Scripting Tasks / Exercises with This Log
 
-- Here are some ideas for what you could do with this sample log file, matching your current learning stage:
+Here are some ideas for what you could do with this sample log file, matching your current learning stage:
 - Count how many successful SSH logins versus failed attempts.
 - List all unique IPs that attempted SSH access (successful or failed), and how many attempts per IP.
 - Extract and count how many cron jobs ran, and list their commands.
