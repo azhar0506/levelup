@@ -3,6 +3,7 @@
 
 - Basics - Notes taken while completing LabEx exercises. These cover foundational shell concepts and simple command usage.
 - Intermediate - A custom 14 day Bash path I built to focus specifically on commands and scripting skills that matter for real DevOps work.
+- Exercise - Ive also included exercises, so these bash learnings can be reinforced and I can practice from time to time. They just include tasks created via AI and I will be doing these tasks to reinforce everything I've learnt. 
 
 The intermediate section expands beyond LabEx and covers practical automation, text processing, system operations, and small real-world projects.
 
