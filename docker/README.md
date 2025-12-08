@@ -5,7 +5,7 @@
 ## 🐳 Docker Checklist
 
 - [x] Working with Docker Images
-- [ ] Diving Deeper Into Containers
+- [x] Diving Deeper Into Containers
 - [ ] Docker Run Command Parameters
 - [ ] Access and Manage Containers
 - [ ] Custom Docker Images
