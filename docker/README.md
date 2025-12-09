@@ -6,7 +6,7 @@
 
 - [x] Working with Docker Images
 - [x] Diving Deeper Into Containers
-- [ ] Docker Run Command Parameters
+- [x] Docker Run Command Parameters
 - [ ] Access and Manage Containers
 - [ ] Custom Docker Images
 - [ ] Customize Docker Whale's Language
