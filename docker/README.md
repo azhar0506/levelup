@@ -10,9 +10,6 @@
 - [ ] Custom Docker Images
 - [ ] Customize Docker Whale's Language
 - [ ] Advanced Dockerfile Techniques
-- [ ] From Basics to Multi-Stage Builds
 - [ ] Docker Networking Basics
 - [ ] Dive Into Docker Networking
-- [ ] Docker Network Playground
 - [ ] Working with Docker Volumes
-- [ ] Docker Volume Mounting
