@@ -7,8 +7,8 @@
 - [x] Working with Docker Images
 - [x] Diving Deeper Into Containers
 - [x] Docker Run Command Parameters
-- [ ] Custom Docker Images
-- [ ] Customize Docker Whale's Language
+- [x] Custom Docker Images
+- [x] Multi-stage build
 - [ ] Advanced Dockerfile Techniques
 - [ ] Docker Networking Basics
 - [ ] Dive Into Docker Networking
