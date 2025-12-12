@@ -14,7 +14,9 @@
 - Copying files In and Out of Containers
 - Setting Environment Variables
     - Verify if env variables are set
-- Limiting Container resources 
+- Limiting Container resources
+
+---
 
 ## What is Container Management
 
