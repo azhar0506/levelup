@@ -1,5 +1,21 @@
 # Docker Deep Dive into Containers
 
+### Contents
+- What is Container Management
+- Running Containers in Different Modes
+    - Running Container in detached mode
+    - Running Container in interactive mode
+- Managing Container Lifecycle
+    -  List Containers
+    -  Start/Stop/Restart Containers
+- Inspecting Container Details
+- Working with Container Logs
+- Exexuting Commands Inside Containers
+- Copying files In and Out of Containers
+- Setting Environment Variables
+    - Verify if env variables are set
+- Limiting Container resources 
+
 ## What is Container Management
 
 - Involves controlling how containers run, behave, and interact.
