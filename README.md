@@ -11,7 +11,7 @@ I'm following a self-directed DevOps learning path:
 - [x] Git basics
 - [x] Git intermediate
 - [x] Shell scripting basics
-- [o] Shell scripting intermediate
+- [ ] Shell scripting intermediate
 - [ ] Docker
 - [ ] Kubernetes
 - [ ] CI/CD pipelines
