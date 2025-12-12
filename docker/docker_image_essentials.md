@@ -1,5 +1,18 @@
 # Docker Image Essentials 
 
+### Contents
+- What is Docker image
+- Pulling images from Docker Hub
+- Running Containers from Images
+  - Exampleof running a command on the container
+- Listing and removing images
+- Troubleshoot errors when removing containers
+- Searching for an Image
+- Saving & Loading images
+- Basic Image tagging
+
+---
+
 ## What is Docker Images?
 
 - A Docker image is a lightweight, standalone package that contains everything needed to run a piece of software
@@ -59,7 +72,7 @@ docker rmi <image-id>
 - Containers must be stopped/removed before removing an image
 
 
-## Getting an error when removing container
+## Troubleshoot errors when removing containers
 
 `Error response from daemon: conflict: unable to remove repository reference "python:3.7" (must force) - container <container_id> is using its referenced image <image_id>`
 
