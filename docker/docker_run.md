@@ -1,5 +1,15 @@
 # Deep Dive into docker run
 
+#### Contents
+- What is `docker run`
+- Port Mapping
+- Volume Mounting
+- Environment Variables
+- Network Settings
+- Restart Policies
+- Working Directory
+
+
 ## What is `docker run`?
 
   - `docker run` creates and starts a container from an image.
