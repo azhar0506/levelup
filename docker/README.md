@@ -9,7 +9,7 @@
 - [x] Docker Run Command Parameters
 - [x] Custom Docker Images
 - [x] Multi-stage build
-- [ ] Advanced Dockerfile Techniques
+- [x] Dockerfile Best Practices
 - [ ] Docker Networking Basics
 - [ ] Dive Into Docker Networking
 - [ ] Working with Docker Volumes
