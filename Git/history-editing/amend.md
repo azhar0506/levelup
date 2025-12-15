@@ -19,6 +19,8 @@ git add <file>
 git commit --amend
 ```
 
+Don't run both commands obviously. The first part changes the commit message. Second part, you can add/remove file and then commit the same commit message or modify it
+
 **Important**
 - Only works on the **most recent** commit.
 - Creates a **new commit** (new hash)
