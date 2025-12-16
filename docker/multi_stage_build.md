@@ -3,8 +3,38 @@
 Multi-stage builds allow you to use multiple FROM statements in your Dockerfile. Useful for:
 - creating smaller final images by copying only the necessary artifacts from one stage to another
 
-## Docker file with multi-stage build example
+## Docker file with multi-stage build example 1
 
+```sh
+# Build stage
+FROM golang:1.14-alpine AS builder
+
+WORKDIR /app 
+
+COPY main.go .
+
+RUN go build -o app
+
+# Final Stage
+FROM alpine
+
+COPY --from=builder /app/app .
+
+CMD ["./app"]
+
+```
+
+- `FROM golang:1.14-alpine AS builder`: Use Go image. The `AS build` give the stage a name so we can copy artifcats from it later
+- `WORKDIR /app`: Sets the working directory inside the container for subsequent commands
+- `COPY main.go .`: Brings the source code into the container
+- `RUN go build -o app`: Compiles `main.go` and create a binary called app. `go build` will create an executable file `-o` specifies the output file name for the compiled binary
+- `FROM alpine`: This is the second stage, this creates a minimal image with no Go tools
+- `COPY --from=builder /app/app .`: Copies only from the compiled binary from the builder stage into the final image. 
+
+
+
+
+## Docker file with multi-stage build example 2
 ```sh
 # Build stage
 FROM python:3.9-slim AS builder
