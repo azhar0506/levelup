@@ -24,13 +24,14 @@ CMD ["./app"]
 
 ```
 
-- `FROM golang:1.14-alpine AS builder`: Use Go image. The `AS build` give the stage a name so we can copy artifcats from it later
+- `FROM golang:1.14-alpine AS builder`: Use Go image. The `AS builder` gives the stage a name so we can copy artifcats from it later
 - `WORKDIR /app`: Sets the working directory inside the container for subsequent commands
 - `COPY main.go .`: Brings the source code into the container
 - `RUN go build -o app`: Compiles `main.go` and create a binary called app. `go build` will create an executable file `-o` specifies the output file name for the compiled binary
 - `FROM alpine`: This is the second stage, this creates a minimal image with no Go tools
-- `COPY --from=builder /app/app .`: Copies only from the compiled binary from the builder stage into the final image. 
-
+- `COPY --from=builder /app/app .`: Copies only from the compiled binary from the builder stage into the final image.
+  - The first `/app` is the folder that was created with `WORKDIR /app` and the second /app is the binary that was created `/app`
+- `CMD ["./app"]`: Command where the container starts. It runs the compiled Go application
 
 
 
