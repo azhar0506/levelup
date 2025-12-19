@@ -1,6 +1,6 @@
 # Docker Networking Basics
 
-Docker provides several built-in network dirvers.
+Docker provides several built-in network drivers.
 
 - `bridge`: This is the default network driver. When you start a container without specifying a network, it automatically connects to the bridge network.
   - Containers on the same bridge network can communicate with each other using their IP address
@@ -144,4 +144,69 @@ docker run -d --name host-networked --network host nginx
 
 This command creates a new container named `host-netowrked` using the host network.
 - You cannot use `-p` with host netowrking, as the container is already using the host's network interfaces.
+
+## Custom Bridge Networks
+
+Creating custom bridge network offers better isolation and control over intercontainer communication
+
+```sh
+docker network create my-custom-bridge
+```
+- This creates a bridge network called `my-custom-bridge`
+
+```sh
+docker run --network=my-custom-bridge --name container1 -d nginx
+docker run --network=my-custom-bridge --name container2 -d nginx
+
+docker exec container1 apt-get update && docker exec container1 apt-get install -y iputils-ping
+docker exec container2 apt-get update && docker exec container2 apt-get install -y iputils-ping
+```
+
+- This creates two containers on the bridge network and installs ping
+
+```sh
+docker exec container1 ping -c 4 container2
+```
+
+- Pings container 1 to container 2. Successful ping responses should follow
+
+### Multiple networks on container
+
+- Containers can have multiple networks
+
+```sh
+docker network create my-second-bridge # creates a second bridge network called my-second-bridge
+
+docker network connect my-second-bridge container2 # adds container3 to my-second-bridge network
+
+docker run --network=my-second-bridge --name container3 -d nginx # runs container3 with image nginx on the my-second-bridge network
+
+docker exec container3 apt-get update && docker exec container3 apt-get install -y iputils-ping # installs ping on container3
+```
+
+- Essentially adding a second network bridge, connecting it to container2 and container3 (this was created in this step)
+
+```sh
+docker exec container1 ping -c 2 container2
+docker exec container1 ping -c 2 container3
+docker exec container2 ping -c 2 container3
+```
+
+- `container1` can communicate with `container2`
+- `container1` cannot communicate with `container3`
+- `container2` can communcate with both `container1` and `container3`
+
+## None Network Mode
+
+This mode creates containers with no network interface. This is for maxumum security isolation. 
+- The container will not be able to communcate over the network at all.
+
+```sh
+docker run --network none --name isolated-container
+```
+
+## Network Aliases and Service Discovery
+
+Docker networks enable service discovery through network aliases, allowing multiple containers to share the same DNS name and provide basic load balancing for scalable, resilient applications.
+
 
