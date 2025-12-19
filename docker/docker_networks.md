@@ -1,4 +1,4 @@
-# Docker Networking Basics
+# Docker Networks
 
 Docker provides several built-in network drivers.
 
