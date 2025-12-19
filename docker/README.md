@@ -10,6 +10,5 @@
 - [x] Custom Docker Images
 - [x] Multi-stage build
 - [x] Dockerfile Best Practices
-- [ ] Docker Networking Basics
-- [ ] Dive Into Docker Networking
+- [x] Docker Networking
 - [ ] Working with Docker Volumes
