@@ -12,7 +12,7 @@ I'm following a self-directed DevOps learning path:
 - [x] Git intermediate
 - [x] Shell scripting basics
 - [ ] Shell scripting intermediate
-- [ ] Docker
+- [x] Docker
 - [ ] Kubernetes
 - [ ] CI/CD pipelines
 - [ ] Terraform
