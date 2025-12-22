@@ -2,9 +2,9 @@
 
 ### Kubernetes uses a client-server architecture:
 
-- Control Plane: the brain (decides what should happen)
-- Worker Nodes: the muscle (runs your application)
-- User (Developer/Admin): interacts via CLI or API
+- **Control Plane:** the brain (decides what should happen)
+- **Worker Nodes:** the muscle (runs your application)
+- **User (Developer/Admin):** interacts via CLI or API
 
 You declare a desired state (e.g: "run 3 copies of this app"), and Kubernetes continuously works to make reality match that state.
 
