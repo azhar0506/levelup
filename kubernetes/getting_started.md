@@ -48,3 +48,19 @@ kubectl describe node minikube
 ## Inspect Basic Cluster Resources
 
 Using `-A` or `--all-namespaces` flag shows resources across the entire cluster, which helps understand how Kubernetes uses **Namespaces** to organise and isolate resources.
+
+### Namespaces 
+- Logical partitions in Kubernetes cluster used to **organise** and **manage resources**
+- They allow grouping of related objects by **project**, **team** or **environment**
+
+### Why namespaces are useful
+- Organisation: Keep workloads logically seperated.
+- Security & Access Control: Control who can view or modify resources per namespace.
+- Resource Management: Apply quotas, limits, and policies at a granular level.
+
+### Common namespaces:
+- kube-system: Contains cluster/system components (e.g., CoreDNS, kube-apiserver, scheduler)
+- default: Used for general workloads if no namespace is specifies
+- customer namespaces (e.g., dev): Used for isolated environments or teams.
+  
+
