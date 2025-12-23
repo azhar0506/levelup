@@ -22,7 +22,7 @@ This is to create a pod that runs a single NGINX container
 
 
 ```sh
-vi nginx-pod.yml
+vi nginx-pod.yaml
 
 apiVersion: v1
 kind: Pod
@@ -49,7 +49,9 @@ spec:
   - `image: nginx:latest`: Specifies the container image.
   - `ports:`: A list of ports that the container will expose.
     - `containerPort: 80`: Specifies that the container will expose port 80. Port 80 is the standard HTTP port.
-  
+
+⚠️ **Important:** You do not need the `spec:` part in nginx-pod.yaml in real-world application as you will **never** create individual Pods manually
+
 ```sh
 kubectl apply -f nginx-pod.yaml
 ```
@@ -103,7 +105,7 @@ spec:
     - `matchLabels`: Defines the labels that pods must have to be selected by this Deployment. Here, it selects pods with the label `app: nginx`.
   - `template`: The `template` defines the pod specification that the Deployment will use to create new pods.
     - It's essentially the same pod definition as in the `nginx-pod.yaml` aboe, including `metadata.labels` and `spec.containers`
-    - Important: The labsls defined in `template.metadata.labels` must match the `selector.matchLabels` so that the Deployment can manage these pods
+    - ⚠️ **Important**: The labels defined in `template.metadata.labels` must match the `selector.matchLabels` so that the Deployment can manage these pods
 
 ```sh
 kubectl apply -f nginx-deployment.yaml
