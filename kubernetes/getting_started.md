@@ -45,6 +45,28 @@ kubectl describe node minikube
 
 - Comprehensive node details
 
+## `kubectl` command patterns
+
+```sh
+kubectl [command] [TYPE] [NAME] [flags]
+```
+
+- `kubectl`: The command line tool itself
+- `[command]`: Specifies what action you want to perform
+  - `get`: Displays resources
+  - `describe`: Show details about a specific resource
+  - `create`: Create a new resource
+  - `delete`: Delete resources
+  - `apply`: Apply a configuration to a resource
+- `[TYPE]`: Specifies the Kubernetes resource type you want to interact with
+  - `pods`: The smallest deployable units in Kubernetes
+  - `deployments`: Manage sets of pods for scaling and updates
+  - `services`: Expose applications running in pods
+  - `nodes`: The worker machines in your Kubernetes cluster
+  - `namespaces`: Logical groupings of resources
+- `[NAME]`: Name of specific resource. (Optional - kubectl will operate on all resource of specified type if not included)
+- `[flags]`: Optional flags to modify the command's behaviour 
+
 ## Inspect Basic Cluster Resources
 
 Using `-A` or `--all-namespaces` flag shows resources across the entire cluster, which helps understand how Kubernetes uses **Namespaces** to organise and isolate resources.
@@ -61,6 +83,13 @@ Using `-A` or `--all-namespaces` flag shows resources across the entire cluster,
 ### Common namespaces:
 - kube-system: Contains cluster/system components (e.g., CoreDNS, kube-apiserver, scheduler)
 - default: Used for general workloads if no namespace is specifies
-- customer namespaces (e.g., dev): Used for isolated environments or teams.
+- kube-node-lease: Used for node leases, which help the control plane track the health of the nodes
+- kube-public: Intended for resources that should be publicly accessible
+- custom namespaces (e.g., dev): Used for isolated environments or teams.
   
 
+```sh
+kubectl get pods -n kube-system
+```
+
+- This command lists all the pods running in the `kube-system` namespace.
