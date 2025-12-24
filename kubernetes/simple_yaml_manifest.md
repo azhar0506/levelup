@@ -120,5 +120,5 @@ deployment.apps/nginx-deployment created
 To verify creation of Deployment is created:
 
 ```sh
-To verify creation of pods:
+kubectl get deployments
 ```
