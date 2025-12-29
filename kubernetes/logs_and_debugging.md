@@ -162,7 +162,7 @@ kubectl get events --sort-by='.metadata.creationTimestamp'
 ### Filtering (The "Signal-to-Noise" Filter)
 
 ```sh
-kubectl get events --field-selector type=Warnin
+kubectl get events --field-selector type=Warning
 ```
 
 - find errors only
