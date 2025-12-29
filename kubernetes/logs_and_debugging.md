@@ -138,4 +138,38 @@ kubectl describe nodes <node-name>
 
 While `descrie` shows events for a specific resource, `kubectl get events` shows what is happening across the entire namespace or cluster
 
-2. Key Commands & Flags
+### Key Commands & Flags
+
+```sh
+kubectl get events
+```
+
+- Shows recent activitiies
+
+```sh
+kubectl get events -w
+```
+
+- real-time monitoring. (Use this on a different terminal tab)
+
+
+```sh
+kubectl get events --sort-by='.metadata.creationTimestamp'
+```
+
+- Chronological order - if you want to know the sequence of crash
+
+### Filtering (The "Signal-to-Noise" Filter)
+
+```sh
+kubectl get events --field-selector type=Warnin
+```
+
+- find errors only
+
+
+```sh
+kubectl get events --field-selector involvedObject.kind=Deployment
+```
+
+- focus on one type of error
