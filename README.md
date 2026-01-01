@@ -13,7 +13,7 @@ I'm following a self-directed DevOps learning path:
 - [x] Shell scripting basics
 - [ ] Shell scripting intermediate
 - [x] Docker
-- [ ] Kubernetes
+- [x] Kubernetes
 - [ ] CI/CD pipelines
 - [ ] Terraform
 - [ ] Monitoring/logging
