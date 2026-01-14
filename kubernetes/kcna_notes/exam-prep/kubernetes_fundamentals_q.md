@@ -1,0 +1,76 @@
+### What is the primary function of Container Orchestration?
+
+Supporting the operational needs in running containers. This includes tasks such as: 
+    - Scaling containerised applocations up or down
+    - managing resource allocation
+    - handling rolling updates and deployments
+    - monitoring applicaiton health performance
+    - providing high availability and fault tolerance
+    - help ensure that containers are running smoothly, efficiently, and in a way that aigns with the needs of the application
+
+### What is one way to extend Kubernetes so that it provides functionality beyond its core features?
+
+CRD (Custom Resource Definition) are a means of expanding Kubernetes to have functionality outside of its core features. CRDs allow developers to define new resources and APIs that can be used to extend the Kubernetes platform. By creating custom resources, developers can add new features and functionality to their clusters without having to modify the underlying Kubernetes codebase. 
+
+### What is the primary benefit of Container Orchestration in the deployment of complex applications?
+
+The primary benefit of Contaienr Orchestration in the deployment of complex applications is that it standardises the deployment process and integrates with various components like networking, storage, security, and autoscaling. This enables developers to focus on writing code, rather than worrying about the underlying infrastructure. 
+
+---
+
+
+### What type of networking does the CNI primarily enable in a Kubernetes cluster?
+
+Primary responsible for setting up networking so that Pods can communicate with each other across different nodes in the cluster. They ensure that each Pod gets an IP address and that network traffic can be routed appropriately between Pods on different hosts. 
+
+### Which component is responsible for spwaning and running containers in a Kubernetes architecture?
+
+The Low-Level Container Runtime (e.g. runc) is a component that's responsible for actually running the containers in a Kubernetes architecture. It interacts with the Kubelet to manage the lifecycle of containers on each node.
+
+### What is the role of the Kubelet in the Kubernetes architecture?
+
+The Kubelet acts as he primary node agent that runs on each machine in a Kubernetes cluster. Its main responsibility is to maintain the state of pods (collections of containers) on its host machine. It communicates with the API server and other components to ensure that the desired state of the Pod is maintained. 
+
+### How is ETCD used in Kubernetes architecture?
+
+ETCD is a distributed key-value store that's used in Kubernetes to store and maange the state of the cluster. It acts as the single source of truth for all data, including Pod definitions, ReplicaSets, Deployments, Services, and more. All components in the cluster rely on etcd to retrieve and update this information
+
+### What is the role of the Kube-Api Server in the Kubernetes architecture?
+
+The Kube-Api Server acts as the central entry point for the Kubernetes cluster, providing a RESTful API interface to other components and external clients. It handles incoming requests, authenticates and authorises them, and then routes them to the appropriate component for processes.
+
+### What is the function of the Kube-Scheduler in the Kubernetes architecture?
+
+Responsible for determining which nodes in a Kubernetes cluster are valid placements for pods based on various constraints and resource requirements. It takes into account factors such as node labels, taints, affinity, anti-affinity, and available resources when make scheduling decisions
+
+### What role does the Kube-Proxy play in the Kubernetes infrastructure?
+
+A network proxy that runs on each node in a Kubernetes cluster. Its primary function is to dynamically configure TCP/UDP and SCTP forwarding on the system it runs on, allowing pods to communicate with each other even if they are nto running on the same host.
+
+### What is the role of the Controller-Manager in the Kubernetes architecture?
+
+The controller-manager is a component in the Kubernetes control plane that runs control loops to minotr the state of the cluster and make or request change to achieve the desired state,
+
+### What is the role fo the Cloud-Controller-Manager 
+
+CCM bridges functionality of the cloud provider to the Kubernetes server. It acts as an interface between the Kubernetes server and the underunderlying cloud infrastructure, enabling featues such as:
+ - Node management: create and deleting nodes in the cloud - 
+
+### What protocol is used by distributed systems to ensure that each node in the cluster agrees on the same state even in the face of failures?
+
+RAFT (Reliable Asynchronous Fault-Tolerant) is a consensus protocol designed specifically for distributed systems to ensure that each node in the cluster agrees on the same state even in the face of failures. RAFT works by electing a leader node and using a voting mechanism to ensure that all nodes agree on the same value for any given log entry. This ensures that the system remains consistent even if some nodes fail or become disconnected.
+
+### How do nodes in a higly available Kubernetes configuration connect to the API server?
+
+In a highly available Kubernetes configuration, nodes typcially connect to the API server through a load balancer. The load balancer distributes incoming traffic across multiple replicas of the API server, ensuring that the cluster remains accessible even if one or more API servers become unavailable. By using a laod balancer, nodes can connect to the API server without needing to know the IP address of a specifc API server instance.
+
+### What is a Pod in the context of Kubernetes?
+
+A Pod is the samlelst and simplest unit that you create or deploy. A Pod represents one or more containers that share resources like storage, networking, and execution. Pods can container multiple containers, but they are scheduled together as a single entity on a node in the cluster. 
+
+
+### When does the Kubernetes Kube-Scheduler determine the ndoe placement for a pod?
+
+After a pod has been created and registered in etcd, Kube-Scheduler looks at its queue of pending pods to be scheduled (which now includes this newly created pod). The scheduler then uses various factors liekr esource availability, taints, tolerations, node affinity, etc., to determine which node would be the best fit for running this pod. Once it decides on a suitable node, it updates etcd with its decision and that's how the pod gets scheduled. 
+
+

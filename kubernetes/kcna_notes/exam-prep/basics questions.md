@@ -260,3 +260,30 @@ Docker rm
 To improve security by limiting privileges. This is the correct answer because running a container as a non-root user reduces the attack surface and prevents malicious code from gaining elevated privileges. By default containers run with root privileges, which can be a security risk if an attacker gains access to the container. Running as a non-root user limits the damage that can be done in case of a breach.
 
 
+### What does the command `docker run --rm nginx` do?
+
+Pulls the nginx image if it does not exist, runs a container and removes the container upon exit. `--rm` tells Docker to automatically remove the container when it exits. If the nginx image does not already exist locally, Docker will pull it from the registry before running the container.
+
+### What is the purpose of the `-d` option in the command `docker run -d --rm -P nginx`?
+
+This `-d` option in the command detaches the container from the terminal, allow it to run in the background.
+
+### What is the purpose of using `-p` option in the command `docker run -d --rm -p 12345:80 nginx`
+
+The `-p` option in the command specifies the port to be used for connectivitiy to the container. In this case, it maps port 80 inside the container to port 12345 on the host machine. This allows external traffic to reach the container's web server (nginx) through the specified host port
+
+### What is the purpose of using a volume in Docker?
+
+Store and mange data in a container. Volumes provide a way to persist data across container restarts, allowing you to maintain state and keep your data safe even when containers are created or deleted. By mounting a host directory as a volume inside a containerm you can ensure that data written by the container is preserved.
+
+### What is the better approach for managing files used by a container instead of modifying them directly within the container?
+
+Using a volume that containers the data and passing it to the container provides a clean way to manage files outside of the container's filesystem. By mounting a host directory as a volume inside a container, you can share files between the host and the container, ensuring that changes made by the container are persisted even when the container is restarted or deleted. 
+
+### How do you publish all exposed ports of a container when running it with Docker?
+
+The -P flag tells Docker to publish all exposed ports of the container to th host machine. When you run a container with the -P flag, Docker will automatically map any exposed port in the container to a random available port on the host machine. 
+
+### Which command is used to execute another process inside a running Docker container?
+
+`docker exec` allows you to run a command or execute another process inside a running Docker container. you specify the name of the container and the command you want to execute, and Docker will run the command in a new process within the existing container.
